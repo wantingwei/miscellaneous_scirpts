@@ -1,8 +1,10 @@
 # Some codes that I thing are useful for data processing
 
 ### 1. How to rename a batch files in the directory
-``` %%bash```
+``` %%bash``` 
+##
 ```path_with_reads='data_output_redo/'```
+##
 ```mkdir data_output_redo```
 ```cd $path_with_reads```
 ```for f in *.fastq.gz; do mv "$f" "${f/name_you_to_select/the_replace_string}"; done ```
