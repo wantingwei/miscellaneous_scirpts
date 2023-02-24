@@ -2,9 +2,9 @@
 
 ### 1. How to rename a batch files in the directory
 ``` %%bash``` <br>
-```path_with_reads='data_output_redo/'```
-```mkdir data_output_redo```
-```cd $path_with_reads```
+```path_with_reads='data_output_redo/'``` <br>
+```mkdir data_output_redo``` <br>
+```cd $path_with_reads``` <br>
 ```for f in *.fastq.gz; do mv "$f" "${f/name_you_to_select/the_replace_string}"; done ```
 
 
