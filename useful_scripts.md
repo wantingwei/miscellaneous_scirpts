@@ -17,6 +17,6 @@
 
 first, you need to generate a .txt file contain all the file name that you are interested <br>
 eg. nano test_script.txt  <br>
-you can do mv or cp the select file in to a folder, here the path of the folder is /Users/Wanting/Desktop/test_case/folder <br>
+you can do ```mv``` or ```cp``` the select file in to a folder, here the path of the folder is ```/Users/Wanting/Desktop/test_case/folder```<br>
 ``` %%bash``` <br>
 ``` for fileName in `cat test_script.txt`; do cp $fileName /Users/Wanting/Desktop/test_case/folder; done ```
