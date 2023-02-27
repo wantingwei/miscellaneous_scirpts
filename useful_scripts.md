@@ -14,7 +14,7 @@ This scripts is super helpful for generate states.txt file, you don't want to su
 ``` %%bash``` <br>
 ``` awk '!seen[$0]++' file.name ```
 
-## 3.How to using .txt file to select specific file in to a different folder
+## 3.How to use .txt file to select specific file in to a different folder
 first, you need to generate a .txt file contain all the file name that you are interested <br>
 eg. nano test_script.txt  <br>
 you can do ```mv``` or ```cp``` the select file in to a folder, here the path of the folder is ```/Users/Wanting/Desktop/test_case/folder```<br>
