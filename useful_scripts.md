@@ -1,7 +1,7 @@
 # Some useful scripts for data processing
 
 ### 1. How to rename a batch files in the directory
-After received data from biotech, there always suffix at the end of each file.To minimize the workload, I will change the file name in to same format.This code helps to replace the undesired text in the name.
+After received data from biotech, there always suffix at the end of each file.To minimize the workload, I will change the file name in to same format.This code helps to replace the undesired text in the name.<br>
 ``` %%bash``` <br>
 ```path_with_reads='data_output_redo/'``` <br>
 ```mkdir data_output_redo``` <br>
@@ -10,7 +10,7 @@ After received data from biotech, there always suffix at the end of each file.To
 
 
 ## 2.How to remove duplicate string in a .txt file
-This scripts is super helpful for generate states.txt file, you don't want to submit a same job twice,so this scirpt will help you avoid having duplicate name in the states.txt file
+This scripts is super helpful for generate states.txt file, you don't want to submit a same job twice,so this scirpt will help you avoid having duplicate name in the states.txt file <br>
 ``` %%bash``` <br>
 ``` awk '!seen[$0]++' file.name ```
 
