@@ -1,6 +1,7 @@
-# Some codes that I thing are useful for data processing
+# Some useful scripts for data processing
 
 ### 1. How to rename a batch files in the directory
+After received data from biotech, there always suffix at the end of each file.To minimize the workload, I will change the file name in to same format.This code helps to replace the undesired text in the name.
 ``` %%bash``` <br>
 ```path_with_reads='data_output_redo/'``` <br>
 ```mkdir data_output_redo``` <br>
@@ -9,12 +10,11 @@
 
 
 ## 2.How to remove duplicate string in a .txt file
-
+This scripts is super helpful for generate states.txt file, you don't want to submit a same job twice,so this scirpt will help you avoid having duplicate name in the states.txt file
 ``` %%bash``` <br>
 ``` awk '!seen[$0]++' file.name ```
 
 ## 3.How to using .txt file to select specific file in to a different folder
-
 first, you need to generate a .txt file contain all the file name that you are interested <br>
 eg. nano test_script.txt  <br>
 you can do ```mv``` or ```cp``` the select file in to a folder, here the path of the folder is ```/Users/Wanting/Desktop/test_case/folder```<br>
