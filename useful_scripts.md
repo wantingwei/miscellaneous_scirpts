@@ -6,7 +6,7 @@ After received data from biotech, there always suffix at the end of each file.To
 ```path_with_reads='data_output_redo/'``` <br>
 ```mkdir data_output_redo``` <br>
 ```cd $path_with_reads``` <br>
-```for f in *.fastq.gz; do mv "$f" "${f/name_you_to_select/the_replace_string}"; done ```
+```for f in *.fastq.gz; do mv "$f" "${f/name_you_to_select/the_replace_string}"; done ``` <br>
 eg. ```for f in *.fastq.gz; do mv "$f" "${f/_S*_L003_R1_001/_R1}"; done ```
 
 
