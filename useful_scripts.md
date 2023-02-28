@@ -20,3 +20,9 @@ eg. nano test_script.txt  <br>
 you can do ```mv``` or ```cp``` the select file in to a folder, here the path of the folder is ```/Users/Wanting/Desktop/test_case/folder```<br>
 ``` %%bash``` <br>
 ``` for fileName in `cat test_script.txt`; do cp $fileName /Users/Wanting/Desktop/test_case/folder; done ```
+
+## 4. using sed to rename string in the text (mainly for snpEff)
+solution link : https://github.com/pcingola/SnpEff/wiki/ERROR_CHROMOSOME_NOT_FOUND <br>
+sometimes you will have special characters in the orginal text, use \ at the front at each character <br>
+the orginal text are A/California/04/2009|NS <br>
+``` sed "s/A\/California\/04\/2009\|NS/A_CALIFORNIA_04_2009_NS/g" > ${sample}_lofreq.vcf ```
