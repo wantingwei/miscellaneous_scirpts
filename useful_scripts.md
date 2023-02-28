@@ -26,3 +26,7 @@ solution link : https://github.com/pcingola/SnpEff/wiki/ERROR_CHROMOSOME_NOT_FOU
 sometimes you will have special characters in the orginal text, use \ at the front at each character <br>
 the orginal text are A/California/04/2009|NS <br>
 ``` sed "s/A\/California\/04\/2009\|NS/A_CALIFORNIA_04_2009_NS/g" > ${sample}_lofreq.vcf ```
+
+# 5. adding suffix in file name 
+``` for file in *.fa; do mv "$file" "${file%.fa}-fluA-H1.fa" ``` <br>
+
