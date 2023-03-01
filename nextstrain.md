@@ -27,7 +27,8 @@ from datetime import datetime
 ```
 meta_data = pd.read_csv('marshfield_ref_metadata.csv')
 meta_data.rename( columns={0 :'strain',1 :'date',2 :'region',3 :'country'}, inplace=True ) 
-#adding header for the csv file based on the column name you have. it is important to do this step, otherwise Augur will not able to read the metadata
+#adding header for the csv file based on the column name you have. it is important to do this step, 
+otherwise Augur will not able to read the metadata
 meta_data.to_csv("marshfield_ref_metadata_rf.csv", sep='\t', index=False)
 ``` 
 you will use the new csv file you generate as the metadata input
