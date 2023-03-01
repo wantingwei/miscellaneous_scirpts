@@ -22,7 +22,7 @@ do
 		ext=$(echo $fn | grep -o '|[A-Z][A-Z]')
 		ext=${ext##*|}
 		fname="${fileprefix}${ext}"
-		echo $fn >> $fname
+		echo $fn >> $fname.fasta
 		echo $segment >> $fname.fasta
 	done
 done
