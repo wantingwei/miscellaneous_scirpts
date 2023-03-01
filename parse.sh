@@ -1,3 +1,5 @@
+## This sciprts help you substract the gene segment for each sample and concatenate them in a seperate file
+
 fileprefix="gene_"
 seqs=$(cat test.fasta | awk '/>.*\|NP/')
 for seq in $seqs
@@ -24,11 +26,3 @@ do
 		echo $segment >> $fname
 	done
 done
-# />A\/North_Carolina\/04\/2016/,/>/p
-# />A\/North_Carolina\/04\/2016/,/>/p
-	#name=$(echo $name | sed "s+\/+\\\/+g")
-	#names=$(sed '/>$name/p' test.fasta)
-	#echo $names
-	#cmd="/>${name}/,/>/p"
-	#echo $cmd
-	#cat test.fasta | sed $cmd
