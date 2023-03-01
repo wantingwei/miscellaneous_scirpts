@@ -6,7 +6,7 @@ This tutorial is for anyone who wants to use nextstrain but without any coding b
 Prerequisites
 =============
 
-(https://docs.nextstrain.org/projects/augur/en/stable/installation/installation.html) These instructions will install all of the software you need to complete this tutorial and others.
+[Nextstrain Installation tutorial](https://docs.nextstrain.org/projects/augur/en/stable/installation/installation.html) These instructions will install all of the software you need to complete this tutorial and others.
 
 Tutorial
 ===========
