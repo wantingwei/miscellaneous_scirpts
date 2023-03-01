@@ -6,7 +6,7 @@ This tutorial is for anyone who wants to use nextstrain for baisc phylogentic an
 Prerequisites
 =============
 
-[Install Jupyter notebook](https://jupyter.org/install)
+[Install Jupyter notebook](https://jupyter.org/install) <br>
 [Nextstrain Installation tutorial](https://docs.nextstrain.org/projects/augur/en/stable/installation/installation.html) These instructions will install all of the software you need to complete this tutorial and others.
 
 Tutorial
