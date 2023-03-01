@@ -1,11 +1,12 @@
 
-using nextstrain augur for phylogenetic anlaysis 
+Using nextstrain augur for phylogenetic anlaysis 
 ================================================
 This tutorial is for anyone who wants to use nextstrain but without any coding background. I wil try to include all the details to increase reproduciblity. you won't need to use all the command, feel free to use modify this scirpt to fit best on your dataset. <br>
 
 Prerequisites
 =============
 :doc:`Install Nextstrain </install>`. These instructions will install all of the software you need to complete this tutorial and others.
+
 =====================
 1. activate nextstrian enviroment in your terminal <br>
 ```conda activate nextstrain``` <br>
