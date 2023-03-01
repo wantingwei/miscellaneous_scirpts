@@ -1,7 +1,7 @@
 
 Using Nextstrain Augur for Phylogenetic Anlaysis 
 ================================================
-This tutorial is for anyone who wants to use nextstrain for baisc phylogentic anlsyis. No coding experience requried. I will try to include a lot of details to increase reproduciblity. You won't need to use all the command, feel free to use modify this scirpt to fit best on your dataset. <br>
+This tutorial is for anyone who wants to use nextstrain for baisc phylogentic anlsyis. No coding experience is requried. I will try to include a lot of details to increase reproduciblity. You won't need to use all the command, feel free to use modify this scirpt to fit best on your dataset. <br>
 
 Prerequisites
 =============
