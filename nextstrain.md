@@ -11,6 +11,8 @@ Prerequisites
 
 Tutorial
 ===========
+Before actually moving to the Augur pipeline you need to prepared the input file, including the .fasta and metadata.csv <br>
+I will guide you go through the pre-process step.<br>
 1. Activate nextstrian enviroment in your terminal <br>
 ```%%bash
 conda activate nextstrain 
@@ -31,7 +33,7 @@ meta_data.rename( columns={0 :'strain',1 :'date',2 :'region',3 :'country'}, inpl
 otherwise Augur will not able to read the metadata
 meta_data.to_csv("marshfield_ref_metadata_rf.csv", sep='\t', index=False)
 ``` 
-you will use the new csv file you generate as the metadata input
+you will use the new csv file you generate as the metadata input <br>
 3. cleaning your fasta file
 first you want to concat all the fasta file together <br>
 ```
