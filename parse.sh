@@ -23,6 +23,6 @@ do
 		ext=${ext##*|}
 		fname="${fileprefix}${ext}"
 		echo $fn >> $fname
-		echo $segment >> $fname.fasta
+		echo $segment >> ${fname}.fasta
 	done
 done
