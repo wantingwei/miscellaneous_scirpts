@@ -6,8 +6,10 @@ This tutorial is for anyone who wants to use nextstrain but without any coding b
 Prerequisites
 =============
 
-:doc:`Install Nextstrain </install>`. These instructions will install all of the software you need to complete this tutorial and others.
-=======================================================================================================================================================
+(https://docs.nextstrain.org/projects/augur/en/stable/installation/installation.html) These instructions will install all of the software you need to complete this tutorial and others.
+
+Tutorial
+===========
 1. activate nextstrian enviroment in your terminal <br>
 ```conda activate nextstrain``` <br>
 ```jupyter notebook``` <br>
