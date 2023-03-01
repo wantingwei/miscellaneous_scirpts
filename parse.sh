@@ -1,6 +1,7 @@
 ## This sciprts help you substract the gene segment for each sample and concatenate them in a seperate file
 
 fileprefix="gene_"
+filename="file_you_want_to_process.fa'
 seqs=$(cat test.fasta | awk '/>.*\|NP/')
 for seq in $seqs
 do
@@ -11,14 +12,14 @@ do
 	name=$(echo $name | sed "s+\/+\\\/+g")
 	echo $name
 	cmd="/>${name}\|/"
-	names=$(cat test.fasta | awk $cmd)
+	names=$(cat ${filename} | awk $cmd)
 	for fn in $names
 	do
 		rename=$(echo $fn | sed "s+\/+\\\/+g")
 		rename=$(echo $rename | sed "s+\>+\\\>+g")
 		rename=$(echo $rename | sed "s+\|+\\\|+g")
 		cmd="/${rename}/{flag=1;next}/\>/{flag=0}flag"
-		segment=$(cat test.fasta | awk $cmd)
+		segment=$(cat ${filename} | awk $cmd)
 		ext=$(echo $fn | grep -o '|[A-Z][A-Z]')
 		ext=${ext##*|}
 		fname="${fileprefix}${ext}"
