@@ -11,10 +11,10 @@ Prerequisites
 Tutorial
 ===========
 1. activate nextstrian enviroment in your terminal <br>
-.. code-block::
-%%bash
-     conda activate nextstrain 
-     jupyter notebook
+```%%bash
+conda activate nextstrain 
+jupyter notebook
+```
 2. working on your metadata <br>
 ```https://docs.nextstrain.org/projects/augur/en/stable/faq/metadata.html``` you will able to find all the detail info from the link <br> 
 Nextstrian does not recommend using excel to modify your data, but if you are using excel the best way is to resave the file using python or R. <br>
