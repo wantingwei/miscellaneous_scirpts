@@ -2,7 +2,7 @@
 
 fileprefix="gene_"
 filename="file_you_want_to_process.fa'
-seqs=$(cat test.fasta | awk '/>.*\|NP/')
+seqs=$(cat ${filename} | awk '/>.*\|NP/')
 for seq in $seqs
 do
 	suffix="|NP*"
