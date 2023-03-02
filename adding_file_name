@@ -1,0 +1,10 @@
+## This scripts able us add the file name before the ref in each gene segments
+for file in *flu*.fa
+do
+f=${file%%.fa}
+sample_id=${file%%-flu*.fa}
+sed "s/^>/>$sample_id\//g" ${f}.fa > ${f}.temp
+#sed "s/^start_sign/$filename\//g ${f}.fa > ${f}.temp"
+cat ${f}.temp >> complied-All.fa
+done
+rm *.temp
