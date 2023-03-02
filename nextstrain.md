@@ -19,7 +19,7 @@ conda activate nextstrain
 jupyter notebook
 ```
 2. Working on your metadata <br>
-[Preparing your Metadata](https://docs.nextstrain.org/projects/augur/en/stable/faq/metadata.html) you will able to find detail information from the link 
+[Preparing your Metadata](https://docs.nextstrain.org/projects/augur/en/stable/faq/metadata.html) you will able to find detail information from the link.
 Nextstrian does not recommend using excel to modify your data, but if you are using excel the best way is to save the file using python or R. <br>
 ```
 #open jupyter notebook
