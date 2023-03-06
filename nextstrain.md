@@ -47,3 +47,51 @@ You will get 8 files at the end,each file contains all the gene segment from sam
 
 Tutorial
 ===========
+I would recommend using jupyter notebook for running nextstain.
+``` %%bash <br>
+
+  augur index \ <br>
+  --sequences gene_HA.fasta \  <br>
+  --output marshfieldz_HA_index.tsv <br> 
+  
+  augur filter \  <br>
+  --sequences gene_HA.fasta \  <br>
+  --sequence-index marshfieldz_HA_index.tsv \  <br>
+  --metadata 19_20_marshfield_metadata_H1N1.csv \  <br>
+  --output marshfield_HA_filtered.fasta \  <br>
+  
+  augur align \ <br>
+  --sequences marshfield_HA_filtered.fasta \ <br>
+  --reference-sequence A\:Singapore\:GP1908\:2015\:H1N1_HA.fasta \ <br>
+  --output marshfield_HA_aligned.fasta \ <br>
+  
+  augur tree \ <br>
+  --alignment marshfield_HA_aligned.fasta \ <br>
+  --output marshfield_HA_tree_raw.nwk 
+  
+  augur refine \ <br>
+  --tree marshfield_HA_tree_raw.nwk \ <br>
+  --alignment marshfield_HA_aligned.fasta \
+  --metadata 19_20_marshfield_metadata_H1N1.csv \
+  --output-tree marshfield_tree_HA.nwk \
+  --output-node-data branch_lengths.json \
+  --timetree \
+  --coalescent opt \
+  --date-confidence \
+  --date-inference marginal \
+  --clock-filter-iqd 4
+  
+  augur ancestral \
+  --tree marshfield_tree_HA.nwk \
+  --alignment marshfield_HA_aligned.fasta \
+  --output-node-data marshfield_HA_node.json \
+  --inference joint
+  
+  augur export v2 \
+  --tree marshfield_tree_HA.nwk \
+  --metadata 19_20_marshfield_metadata_H1N1.csv \
+  --node-data branch_lengths.json \
+              marshfield_HA_node.json\
+  --output auspice/marshfield_19_20_H1N1_HA.json \
+  --maintainers Wanting Wei
+
