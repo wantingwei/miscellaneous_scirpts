@@ -48,29 +48,29 @@ You will get 8 files at the end,each file contains all the gene segment from sam
 Tutorial
 ===========
 I would recommend using jupyter notebook for running nextstain.
-``` %%bash <br>
+``` %%bash 
 
-  augur index \ <br>
-  --sequences gene_HA.fasta \  <br>
-  --output marshfieldz_HA_index.tsv <br> 
+  augur index \ 
+  --sequences gene_HA.fasta \  
+  --output marshfieldz_HA_index.tsv 
   
-  augur filter \  <br>
-  --sequences gene_HA.fasta \  <br>
-  --sequence-index marshfieldz_HA_index.tsv \  <br>
-  --metadata 19_20_marshfield_metadata_H1N1.csv \  <br>
-  --output marshfield_HA_filtered.fasta \  <br>
+  augur filter \  
+  --sequences gene_HA.fasta \  
+  --sequence-index marshfieldz_HA_index.tsv \ 
+  --metadata 19_20_marshfield_metadata_H1N1.csv \  
+  --output marshfield_HA_filtered.fasta \  
   
-  augur align \ <br>
-  --sequences marshfield_HA_filtered.fasta \ <br>
-  --reference-sequence A\:Singapore\:GP1908\:2015\:H1N1_HA.fasta \ <br>
-  --output marshfield_HA_aligned.fasta \ <br>
+  augur align \ 
+  --sequences marshfield_HA_filtered.fasta \ 
+  --reference-sequence A\:Singapore\:GP1908\:2015\:H1N1_HA.fasta \ 
+  --output marshfield_HA_aligned.fasta \ 
   
-  augur tree \ <br>
-  --alignment marshfield_HA_aligned.fasta \ <br>
+  augur tree \ 
+  --alignment marshfield_HA_aligned.fasta \ 
   --output marshfield_HA_tree_raw.nwk 
   
-  augur refine \ <br>
-  --tree marshfield_HA_tree_raw.nwk \ <br>
+  augur refine \ 
+  --tree marshfield_HA_tree_raw.nwk \ 
   --alignment marshfield_HA_aligned.fasta \
   --metadata 19_20_marshfield_metadata_H1N1.csv \
   --output-tree marshfield_tree_HA.nwk \
@@ -94,4 +94,6 @@ I would recommend using jupyter notebook for running nextstain.
               marshfield_HA_node.json\
   --output auspice/marshfield_19_20_H1N1_HA.json \
   --maintainers Wanting Wei
+  ```
+  to visuliaze the tree simply open [auspice](https://auspice.us/) and drag your json output.
 
