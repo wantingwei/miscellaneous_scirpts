@@ -1,7 +1,5 @@
-## This sciprts help you substract the gene segment for each sample and concatenate them in a seperate file
-
 fileprefix="gene_"
-filename="file_you_want_to_process.fa'
+filename="complied-All.fa" #your file name
 seqs=$(cat ${filename} | awk '/>.*\|NP/')
 for seq in $seqs
 do
