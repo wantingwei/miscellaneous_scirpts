@@ -8,7 +8,7 @@ After received data from biotech, there always suffix at the end of each file.To
 ```cd $path_with_reads``` <br>
 ```for f in *.fastq.gz; do mv "$f" "${f/name_you_to_select/the_replace_string}"; done ``` <br>
 eg. ```for f in *.fastq.gz; do mv "$f" "${f/_S*_L003_R1_001/_R1}"; done ``` <br>
-eg. ```for f in *.fa; do mv "$f" "${f/c_consensus/c}"; done ```
+eg. ```for f in *.fa; do mv "$f" "${f/c_consensus/c}"; done ``` <br>
 using sed to remove all the symbol for ```f in *.fa; do sed 's/_/-/g';done```<br>
 
 ## 2.How to remove duplicate string in a .txt file
