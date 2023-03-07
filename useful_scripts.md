@@ -7,8 +7,9 @@ After received data from biotech, there always suffix at the end of each file.To
 ```mkdir data_output_redo``` <br>
 ```cd $path_with_reads``` <br>
 ```for f in *.fastq.gz; do mv "$f" "${f/name_you_to_select/the_replace_string}"; done ``` <br>
-eg. ```for f in *.fastq.gz; do mv "$f" "${f/_S*_L003_R1_001/_R1}"; done ```
+eg. ```for f in *.fastq.gz; do mv "$f" "${f/_S*_L003_R1_001/_R1}"; done ``` <br>
 eg. ```for f in *.fa; do mv "$f" "${f/c_consensus/c}"; done ```
+using sed to remove all the symbol for ```f in *.fa; do sed 's/_/-/g';done```<br>
 
 ## 2.How to remove duplicate string in a .txt file
 This scripts is super helpful for generate states.txt file, you don't want to submit a same job twice,so this scirpt will help you avoid having duplicate name in the states.txt file <br>
