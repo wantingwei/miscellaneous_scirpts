@@ -81,6 +81,15 @@ I would recommend using jupyter notebook for running nextstain.
   --date-inference marginal \
   --clock-filter-iqd 4
   
+## Tree annotations
+
+  augur traits \
+  --tree marshfield_tree_HA.nwk  \
+  --metadata 19_20_marshfield_metadata_H1N1.csv \
+  --output-node-data marshfield_tree_HA_traits.json \
+  --confidence \
+  --columns vaccination_status age_enroll p_sex
+  
   augur ancestral \
   --tree marshfield_tree_HA.nwk \
   --alignment marshfield_HA_aligned.fasta \
