@@ -8,5 +8,4 @@ Prerequisite
 1.[Download Geneious](https://www.geneious.com/download/) <br>
 2.reference fasta file (the file you want to add annotation) <br>
 3.gtf and fasta file for annoated sequence, ideally you want to find the cloest sequence to your reference. <br>
-
 ========================================================================================================================
