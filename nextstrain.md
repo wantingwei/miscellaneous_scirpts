@@ -105,4 +105,8 @@ I would recommend using jupyter notebook for running nextstain.
   --maintainers Wanting Wei
   ```
   to visuliaze the tree simply open [auspice](https://auspice.us/) and drag your json output.
+  
+  Trouble shooting
+  ================
+  1. if you are having trouble with any of the command in the tutorial. A useful place to check the document and corrent input file is the snakefile for [Zika tutorial](https://github.com/nextstrain/zika/blob/main/Snakefile).
 
