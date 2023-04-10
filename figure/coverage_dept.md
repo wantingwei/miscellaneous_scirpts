@@ -1,8 +1,8 @@
-import pandas as pd
+```import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt ```
 
-sample ='90_cal'
+```sample ='90_cal'
 #define the path for the samtools_depth output
 def influenza_coverage(sample):
     path = 'depth/'+sample+'.consensus.depth.tsv'
@@ -64,4 +64,4 @@ def influenza_coverage(sample):
     plt.text(11680,5200, "MP", size=13,rotation =0)
     plt.text(12600,5200, "NS", size=13,rotation =0)
     plt.axhline(y = 200, color = 'black', linestyle = 'dashed', alpha=0.4)
-    #plt.savefig('depth/sample_read_depth.pdf', dpi=300)
+    #plt.savefig('depth/sample_read_depth.pdf', dpi=300) ```
