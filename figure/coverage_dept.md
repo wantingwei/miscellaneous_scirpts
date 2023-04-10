@@ -1,8 +1,8 @@
 ```import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as plt ```
+import matplotlib.pyplot as plt 
 
-```sample ='90_cal'
+sample ='90_cal'
 #define the path for the samtools_depth output
 def influenza_coverage(sample):
     path = 'depth/'+sample+'.consensus.depth.tsv'
