@@ -1,15 +1,16 @@
+import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt 
-
+#This scirpt is used for ploting depth over position for influneza virus
 sample ='90_cal'
 #define the path for the samtools_depth output
 def influenza_coverage(sample):
     path = 'depth/'+sample+'.consensus.depth.tsv'
     df = pd.read_csv(path, sep='\t',header = None) 
-    df.columns =['Gene_segment', 'Position', 'Depth']
-    df_sub = df.Gene_segment.str.split("|",expand = True)
+    df.columns =['Gene_segment', 'Position', 'Depth'] #U can have more column based on needs
+    df_sub = df.Gene_segment.str.split("|",expand = True) #I used | to seperate the reference and gene segments
     df['Segment'] = pd.DataFrame(df_sub[1])
-    ###
+    #calcuate the length for each gene segment 
     PB2 = (len(df[df['Segment']=='PB2']))
     PB1 = (len(df[df['Segment']=='PB1']))
     PA = (len(df[df['Segment']=='PA']))
@@ -38,12 +39,13 @@ def influenza_coverage(sample):
     # print the resulting dataframe
     plt.rcParams["figure.figsize"] = [10,4]
     plt.rcParams["figure.autolayout"] = True
-    sns.lineplot(data=df, x="Position", y="Depth")
+    sns.lineplot(data=df, x="Position", y="Depth") #read the dataframe for plot
     axes = plt.gca()
     axes.set_xlim([-10, 13151])
     axes.set_ylim([-0.02,5000])
     plt.xlabel('Influenza Genome Position',fontsize=14)
     plt.ylabel('Read Depth',fontsize=13)
+    #label the gene segment on the graph
     plt.axvspan(0, 2280, color='peru', alpha=0.2, label='PB2')
     plt.axvspan(2280, 4554, color='burlywood', alpha=0.2, label='PB1')
     plt.axvspan(4554, 6705, color='blanchedalmond', alpha=0.2, label='PA')
