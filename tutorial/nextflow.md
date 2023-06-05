@@ -1,6 +1,5 @@
 ## How to download nextflow on a new computer
-I woudl recommned download X-code before you start anything in terminal. <br>
-``` $ xcode-select --install ```
+### I would recommned download X-code before you start anything in terminal. ``` $ xcode-select --install ```
 1. make a directory called Bioinformatics for better organization
 ```mkdir Bioinformaticas```
 2. Download the nextflow from the website and follow the instruction. https://www.nextflow.io/docs/latest/getstarted.html#installation
