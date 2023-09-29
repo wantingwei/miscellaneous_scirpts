@@ -1,6 +1,10 @@
-## please check the computer setting and docker setting prior to use this pipeline
+## please check the computer setting and docker setting before use this pipeline
 
-### using QIAseq
+### Generate sample sheet 
+```
+python3 ./fastq_dir_to_samplesheet.py <FASTQ_DIR> samplesheet.csv
+```
+### Using QIAseq
 ```
 /Users/wwei54/BioInformatics/nf/nextflow run nf-core/viralrecon \
 --input prolonged_infection_hamster_viralrecon_metadata.csv \
@@ -18,7 +22,8 @@
 -resume {run name}
 ```
 
-### using artic protocol
+### Using artic protocol
+```
 /Users/wwei54/BioInformatics/nf/nextflow run nf-core/viralrecon \
 --input hamster_1.csv \
 --outdir hamster_1_output \
@@ -32,3 +37,4 @@
 -c low_freq_ivar.config \
 -profile docker \
 -resume desperate_panini 
+```
