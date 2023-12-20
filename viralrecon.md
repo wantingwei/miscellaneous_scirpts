@@ -38,7 +38,7 @@ python3 ./fastq_dir_to_samplesheet.py <FASTQ_DIR> samplesheet.csv
 -profile docker \
 -resume desperate_panini 
 ```
-###config file change the default variant calling parameters
+### config file change the default variant calling parameters
 ```
 process {
         withName: 'IVAR_VARIANTS' {
