@@ -8,29 +8,27 @@ import os
 def SNV_frequency_plot_multi(csv_file_paths, file_names, hamster_title):
     """
     Read multiple CSV files into DataFrames and plot POS against ALT_FREQ multiplied by 100
-    in a format suitable for Nature publication.
 
     Parameters:
-        csv_file_paths (list of str): The file paths to the CSV files.
-        file_names (list of str): The names of the files to be displayed as the plot legend.
+        csv_file_paths: The file paths to the CSV files.
+        file_names: The names of the files to be displayed as the plot legend.
 
     Returns:
         None: The function produces a plot.
     """
-    # Configure Matplotlib for Nature-style plots
     sns.set_context("paper", font_scale=2)
     sns.set_style("white")
 
     fig, ax = plt.subplots(figsize=(16, 4), dpi=300)
-    colors = ['#415262', '#E63946', '#F4A261', '#2A9D8F']  # Unique colors for each CSV
+    colors = ['#415262', '#E63946', '#F4A261', '#2A9D8F']  # Unique colors for each CSV. modify color if you don't like current 
     
     legend_patches = []
     
     for i, (csv_file_path, file_name) in enumerate(zip(csv_file_paths, file_names)):
         # Step 1: Read the CSV file into a DataFrame
-        df = pd.read_csv(csv_file_path)
+        df = pd.read_csv(csv_file_path) #add separator if needed
         
-        # Step 2: Check if 'POS' and 'ALT_FREQ' columns exist
+        # Step 2: Check if 'POS' and 'ALT_FREQ' columns exist(the code is based on VCF4.2 format)
         if 'POS' not in df.columns or 'ALT_FREQ' not in df.columns:
             raise ValueError(f"Required columns 'POS' and 'ALT_FREQ' are not present in the CSV file {csv_file_path}.")
 
@@ -43,7 +41,7 @@ def SNV_frequency_plot_multi(csv_file_paths, file_names, hamster_title):
         # Create legend patches
         legend_patches.append(mpatches.Patch(color=colors[i], label=file_name))
     
-    # Add gene segments and other plot elements
+    # Add gene segments and other plot elements (this is based on SARS-COV-2)
     ax.axvspan(0, 21555, facecolor='#C5C5C9', alpha=0.3, zorder=1) # ORF1a|b
     ax.axvspan(21563, 25384, facecolor='#3BC6C8', alpha=0.3, zorder=1) # Spike
     ax.axvspan(26245, 26472, facecolor='#83c54a', alpha=0.3, zorder=1) # Envelope
@@ -60,7 +58,6 @@ def SNV_frequency_plot_multi(csv_file_paths, file_names, hamster_title):
     plt.text(25806, max_val, 'ORF3a', fontweight='bold', size=8, ha='center', rotation= 90)
     plt.text(26358, max_val, 'E', fontweight='bold', size=8, ha='center', rotation=0)
     plt.text(26857, max_val, 'M', fontweight='bold', size=8, ha='center', rotation=0) 
-    
     plt.text(28903, max_val, 'N', fontweight='bold', size=8, ha='center', rotation=0)
     plt.text(27730, max_val, 'ORF6|7|8', fontweight='bold', size=8, ha='center', rotation=90)
     plt.text(29616, max_val, 'ORF10', fontweight='bold', size=8, ha='center', rotation=90)
