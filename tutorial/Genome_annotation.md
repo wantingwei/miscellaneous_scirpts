@@ -19,4 +19,6 @@ Tutorial
 <img width="451" alt="Screen Shot 2023-03-08 at 3 16 02 PM" src="https://user-images.githubusercontent.com/97980830/223851932-518d1596-54c9-4bab-9817-2b9637b6a58a.png"> <br>
 5.on the right side, click transfer annotation, and set the similiarity to 85%(you can change this number) until you saw there is annotation on your referenece genome. click apply
 <img width="1034" alt="Screen Shot 2023-03-08 at 2 51 02 PM" src="https://user-images.githubusercontent.com/97980830/223852132-245fe7e9-8441-4276-9374-37e402b7596e.png"> <br>
-5.Next you want to save the changes and apply changes to orginals <br>
+5.Next you want to save the changes and apply changes to originals <br>
+6.After you apply the changes to original sequence you are able to save it as gtf file
+<img width="1072" alt="Screenshot 2024-04-17 at 11 23 39 AM" src="https://github.com/wantingwei/miscellaneous_scirpts/assets/97980830/adb34b06-8af4-4fdb-8618-fb71dffa64f1">
