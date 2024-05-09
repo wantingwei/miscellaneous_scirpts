@@ -12,6 +12,7 @@ python3 ./fastq_dir_to_samplesheet.py <FASTQ_DIR> samplesheet.csv
 --platform illumina \
 --protocol amplicon \
 --genome 'MN908947.3' \
+--gff \
 --primer_bed DIRECTwithBoosterAprimersfinal.bed \
 --primer_left_suffix '_LEFT' \
 --primer_right_suffix '_RIGHT' \
