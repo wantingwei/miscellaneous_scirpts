@@ -47,3 +47,21 @@ process {
         }
     }
 ```
+
+viralrecon with modified gff
+```nextflow run nf-core/viralrecon \
+-config run_configs/viralrecon-hpc.config \
+-profile singularity \
+--input run_inputs/test/samplesheet.csv \
+#--gff run_inputs/MN908947.3-orf1a-orf1b-gene-split.gff \
+--outdir run_results/test \
+--platform illumina \
+--protocol amplicon \
+--genome 'MN908947.3' \
+--primer_set artic \
+--primer_set_version 5.3.2 \
+--skip_assembly \
+--skip_asciigenome \
+--schema_ignore_params 'genomes,primer_set_version' \
+ -resume
+```
