@@ -65,3 +65,22 @@ viralrecon with modified gff
 --schema_ignore_params 'genomes,primer_set_version' \
  -resume
 ```
+
+```
+nextflow run nf-core/viralrecon \
+-config run_configs/viralrecon-hpc.config \
+-profile singularity \
+--input run_inputs/test/samplesheet.csv \
+--outdir run_results/test \
+--platform illumina \
+--protocol amplicon \
+--genome 'MN908947.3' \
+--primer_set artic \
+--primer_set_version 5.3.2 \
+--skip_assembly \
+--skip_asciigenome \
+--schema_ignore_params 'genomes,primer_set_version' \
+-r 2.6.0 \
+--variant_caller  bcftools \
+-resume
+```
