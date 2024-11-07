@@ -1,0 +1,15 @@
+
+#!/bin/bash
+
+# Loop through all files matching the pattern in the current directory
+for file in SQK-NBD114-96_barcode*.fastq.gz; do
+    # Extract the barcode part from the filename (e.g., "barcode49")
+    barcode=${file#SQK-NBD114-96_}
+    barcode=${barcode%.fastq.gz}
+
+    # Create a folder named after the barcode if it doesn't already exist
+    mkdir -p "$barcode"
+
+    # Move the file into the corresponding folder
+    mv "$file" "$barcode/"
+done
