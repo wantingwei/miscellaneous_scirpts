@@ -17,7 +17,7 @@ Tutorial
 <img width="597" alt="Screen Shot 2023-03-08 at 2 53 20 PM" src="https://user-images.githubusercontent.com/97980830/223851735-fa34356c-4ab6-40fd-b656-50b1175ec0aa.png"> <br>
 4.after you alignment the gene segment,click the alignment and choose the reference set as reference sequence
 <img width="451" alt="Screen Shot 2023-03-08 at 3 16 02 PM" src="https://user-images.githubusercontent.com/97980830/223851932-518d1596-54c9-4bab-9817-2b9637b6a58a.png"> <br>
-5.on the right side, click transfer annotation, and set the similiarity to 85%(you can change this number) until you saw there is annotation on your referenece genome. click apply
+5.on the right side, click transfer annotation, and set the similiarity to 85%(you can change this number) until you saw there is annotation on your referenece genome. click apply. Make sure u are not clicking transfer to consensus
 <img width="1034" alt="Screen Shot 2023-03-08 at 2 51 02 PM" src="https://user-images.githubusercontent.com/97980830/223852132-245fe7e9-8441-4276-9374-37e402b7596e.png"> <br>
 5.Next you want to save the changes and apply changes to the originals, To do this, navigate to file and click save <br>
 6.After you apply the changes to the original sequence you are able to save it as gff file
